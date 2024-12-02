@@ -139,8 +139,8 @@ class EventResource extends Resource
                     ->url(fn(Event $record) => 'events/show/' .$record->id)
                     ->extraAttributes(['class' => 'bg-blue-500 text-white hover:bg-blue-700 !important']),
                 Tables\Actions\EditAction::make()->color('primary')
-                    ->visible(fn ($record) => $record->user_id === Auth::id())
-                    ->url(fn ($record) => route('filament.resources.events.edit', ['record' => $record->id])),
+                    ->visible(fn ($record) => $record->user_id === Auth::id()),
+                    // ->url(fn ($record) => route('filament.resources.events.edit', ['record' => $record->id])),
                 Tables\Actions\DeleteAction::make()
                     ->visible(fn ($record) => $record->user_id === Auth::id()),
             ])

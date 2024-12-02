@@ -58,7 +58,7 @@ class TicketResource extends Resource
                     ->badge()
                     ->color(function(string $state) : string{
                         return match($state){
-                            'active' => 'succes',
+                            'active' => 'success',
                             'inactive' => 'danger',
                         };
                     }),

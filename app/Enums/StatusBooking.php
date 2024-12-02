@@ -25,7 +25,7 @@ enum StatusBooking: string implements HasLabel, HasIcon, HasColor
     public function getColor(): string|array|null
     {
        return match ($this) {
-            self::Approved => 'succes',
+            self::Approved => 'success',
             self::Canceled => 'danger',
             self::Pending => 'warning',
        }; 

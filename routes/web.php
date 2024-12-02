@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
 // Route bagian welcome
 
+
 Route::get('/events', [EventController::class, 'browseEvents'])->name('browse.events'); 
 Route::get('/events', [EventController::class, 'showEvents'])->name('events.index');
 Route::get('/events/category/{category}', [EventController::class, 'exploreCategory'])->name('explore.category'); // Untuk menampilkan event berdasarkan kategori

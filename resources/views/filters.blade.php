@@ -14,15 +14,11 @@
             <select name="category" id="category" 
                     class="px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <option value="" selected>All Categories</option>
-                <option value="Trip/Camp" {{ request('category') == 'Trip/Camp' ? 'selected' : '' }}>Trip / Camp</option>
-                <option value="Concert/Music" {{ request('category') == 'Concert/Music' ? 'selected' : '' }}>Concert / Music</option>
-                <option value="Sport/Fitness" {{ request('category') == 'Sport/Fitness' ? 'selected' : '' }}>Sport / Fitness</option>
-                <option value="Cinema" {{ request('category') == 'Cinema' ? 'selected' : '' }}>Cinema</option>
-                <option value="Museum/Monument" {{ request('category') == 'Museum/Monument' ? 'selected' : '' }}>Museum / Monument</option>
-                <option value="Recreation Park/Attraction" {{ request('category') == 'Recreation Park/Attraction' ? 'selected' : '' }}>Recreation Park / Attraction</option>
-                <option value="Theater" {{ request('category') == 'Theater' ? 'selected' : '' }}>Theater</option>
-                <option value="Restaurant/Gastronomy" {{ request('category') == 'Restaurant/Gastronomy' ? 'selected' : '' }}>Restaurant / Gastronomy</option>
-                <option value="Workshop/Training" {{ request('category') == 'Workshop/Training' ? 'selected' : '' }}>Workshop / Training</option>
+                <option value="Trip-Camp" {{ request('category') == 'Trip-Camp' ? 'selected' : '' }}>Trip / Camp</option>
+                <option value="Concert-Music" {{ request('category') == 'Concert-Music' ? 'selected' : '' }}>Concert / Music</option>
+                <option value="Sport-Fitness" {{ request('category') == 'Sport-Fitness' ? 'selected' : '' }}>Sport / Fitness</option>
+                <option value="Restaurant-Gastronomy" {{ request('category') == 'Restaurant-Gastronomy' ? 'selected' : '' }}>Restaurant / Gastronomy</option>
+                <option value="Workshop-Training" {{ request('category') == 'Workshop-Training' ? 'selected' : '' }}>Workshop / Training</option>
             </select>
         </div>
 

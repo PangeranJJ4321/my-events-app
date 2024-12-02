@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Organizer\Resources;
 
 use App\Filament\Resources\BookingResource\Pages;
 use App\Filament\Resources\BookingResource\RelationManagers;
@@ -66,13 +66,12 @@ class BookingResource extends Resource
                     ->options(self::$statuses)
                     ->default('pending')
                     ->afterStateUpdated(function ($state, callable $set, callable $get) {
-                        // Jika status diubah menjadi 'approved'
-                        if ($state === 'approved') {
-                            // Temukan booking berdasarkan ID
-                            $booking = Booking::find($get('id')); // Dapatkan ID dari form field 'id'
-                
+                        // Check if 'status' has been updated to 'approved'
+                        if ($state['status'] === 'approved') {
+                            // Set all related tickets to 'active'
+                            $booking = Booking::find($get('id')); // Get the current booking
                             if ($booking) {
-                                // Update status tiket terkait menjadi 'active'
+                                // Update the status of all tickets related to this booking
                                 $booking->tickets->each(function (Ticket $ticket) {
                                     $ticket->update(['status' => 'active']);
                                 });
@@ -83,7 +82,8 @@ class BookingResource extends Resource
                     ->required()
                     ->label('Total Price')
                     ->numeric(),
-            ]);
+                ]);
+            
     }
 
     public static function table(Table $table): Table

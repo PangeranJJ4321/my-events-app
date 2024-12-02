@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->enum('role', ['attendant', 'organizer','admin']);
+            $table->enum('role', ['attendant', 'organizer','admin'])->default('attendant');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
