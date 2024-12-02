@@ -1,0 +1,681 @@
+
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"); */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+.typed-cursor {
+    color: transparent; /* Hides the default blinking cursor */
+}
+
+:root {
+    --primary: #9008ff;
+    --white: #ffffff;
+    --bg: #f5f5f5;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 1440px) {
+    html {
+        zoom: 1.5;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        zoom: 1.7;
+    }
+}
+
+@media (min-width: 3860px) {
+    html {
+        zoom: 2.5;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: #797979;
+    transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #222224;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9f9f9;
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--bg);
+}
+
+.container {
+    max-width: 124rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 3rem;
+    color: var(--primary);
+    padding: 2rem 0;
+}
+
+#tranding {
+    padding: 4rem 0;
+}
+
+@media (max-width:1440px) {
+    #tranding {
+        padding: 2rem 0;
+    }
+}
+
+#tranding .tranding-slider {
+    height: 52rem;
+    padding: 2rem 0;
+    position: relative;
+}
+
+@media (max-width:500px) {
+    #tranding .tranding-slider {
+        height: 45rem;
+    }
+}
+
+.tranding-slide {
+    width: 37rem;
+    height: 42rem;
+    position: relative;
+}
+
+@media (max-width:500px) {
+    .tranding-slide {
+        width: 28rem !important;
+        height: 36rem !important;
+    }
+    .tranding-slide .tranding-slide-img img {
+        width: 28rem !important;
+        height: 36rem !important;
+    }
+}
+
+.tranding-slide .tranding-slide-img img {
+    width: 37rem;
+    height: 42rem;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.tranding-slide .tranding-slide-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tranding-slide-content .food-price {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--white);
+}
+
+.food-rating {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.rating ion-icon {
+    color: var(--primary);
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+    display: none;
+}
+
+.tranding-slider-control {
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tranding-slider-control .swiper-button-next {
+    left: 58% !important;
+    transform: translateX(-58%) !important;
+}
+
+@media (max-width:990px) {
+    .tranding-slider-control .swiper-button-next {
+        left: 70% !important;
+        transform: translateX(-70%) !important;
+    }
+}
+
+@media (max-width:450px) {
+    .tranding-slider-control .swiper-button-next {
+        left: 80% !important;
+        transform: translateX(-80%) !important;
+    }
+}
+
+@media (max-width:990px) {
+    .tranding-slider-control .swiper-button-prev {
+        left: 30% !important;
+        transform: translateX(-30%) !important;
+    }
+}
+
+@media (max-width:450px) {
+    .tranding-slider-control .swiper-button-prev {
+        left: 20% !important;
+        transform: translateX(-20%) !important;
+    }
+}
+
+.tranding-slider-control .slider-arrow {
+    background: var(--white);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    left: 42%;
+    transform: translateX(-42%);
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .slider-arrow ion-icon {
+    font-size: 2rem;
+    color: #222224;
+}
+
+.tranding-slider-control .slider-arrow::after {
+    content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+    position: relative;
+    width: 15rem;
+    bottom: 1rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--primary);
+}
+.mavbar1 {
+    position: fixed;    
+    top: 0;           
+    left: 0;
+    right: 0;
+    z-index: 1000;     
+    width: 100%;       
+    background-color: #f8f9fa; 
+}
+
+.mavbar1 {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    margin-top: 73px; 
+    position: relative; 
+}
+
+
+.anjay li a:hover{
+    color: #9008ff;
+}
+
+.anjay li a {
+    font-size: 2rem;
+}
+
+
+.card-event {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.img-wrap {
+    /* background-image: url('adventure.jpg'); */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.event-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+    width: auto;
+}
+
+.event-date .event-month {
+    background-color: #9008ff;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.event-date .event-day {
+    background-color: white;
+    color: black;
+    padding: 5px 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.event-category {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* Atur sesuai batas */
+    transform: translateX(20px); /* Dorong elemen keluar */
+    background-color: white;
+    opacity: 0.8;
+    color: rgb(19, 18, 18);
+    padding: 10px 12px;
+    padding-left: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.event-favorite {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(100%);
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.info-wrap {
+    padding: 15px;
+}
+
+.price-wrap {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #9008ff;
+}
+
+.btn-favorite {
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-favorite:hover {
+    color: #9008ff;
+}
+
+.info-wrap p a {
+    text-decoration: none; 
+    color: #333; 
+    transition: color 0.3s;
+    font-size: 2.3rem;
+}
+
+.info-wrap p a:hover {
+    color: #9008ff; 
+}
+
+.bx-heart {
+    color: #000; 
+    font-size: 1.3rem;
+}
+
+/* Untuk icon hati yang penuh (sudah di-like) */
+.bxs-heart {
+    transform: scale(1.2); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    background-color: transparent; 
+    border-radius: 50%; 
+    padding: 5px; 
+    font-size: 1.3rem;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 220px;
+    transition: transform 0.3s ease;
+}
+.category-card:hover .category-image {
+    transform: scale(1.1);
+}
+.category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-align: right;
+}
+
+.category-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+.filter-box {
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+}
+.filter-header {
+    font-weight: bold;
+    color: #9008ff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.filter-content {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 1.6rem;
+}
+.form-check-label {
+    color: #9008ff;
+}
+
+.filter-content select option {
+    color: #9008ff;
+    font-size: 1.6rem;
+}
+
+.btn-large {
+    font-weight: bold;
+    background-color: #9008ff;
+    color: white;
+}
+
+.form-select .form-control {
+    font-size: 1.6rem;
+    color: #9008ff;
+}
+.form-control {
+    font-size: 1.6rem;
+    height: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.ticket-section .btn {
+    width: 100%;
+}
+.description-section {
+    margin-bottom: 30px;
+}
+.ticket-section {
+    margin-top: 20px;
+}
+.rating-star i {
+    color: #9008ff;
+}
+
+.btn-lg {
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.hover-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding a hover effect on icons to rotate them */
+.btn i {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: rotate(10deg);
+}
+
+
+.comment {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.comment:hover {
+    transform: scale(1.02);
+}
+.avatar img {
+    border-radius: 50%;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.form-floating .form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-floating label {
+    transition: color 0.3s ease;
+}
+
+.form-floating textarea:focus + label {
+    color: #0056b3;
+}
+
+.alert-warning {
+    border-left: 5px solid #07ff66;
+    background-color: #675cfc;
+    font-size: 1.1rem;
+}
+
+.alert-link {
+    text-decoration: underline;
+    color: #9008ff;
+    font-weight: bold;
+}
+
+.alert-link:hover {
+    color: #1f57f0;
+}
+
+.form-control-lg {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.bx {
+    color: #f8b400;
+    transition: transform 0.3s ease;
+}
+
+.bx:hover {
+    transform: scale(1.2);
+}
+
+.bxs-star {
+    color: #f8b400;
+}
+
+.btn-warning {
+    background-color: #9008ff !important; /* Orange primary color */
+    color: #fff !important; /* White text */
+    border: none;
+    margin-right: 2rem;
+}
+
+.btn-outline-warning {
+    color: #9008ff !important; /* Orange text for outline button */
+    border: 2px solid #9008ff !important; /* Orange border */
+}
+
+.btn-warning:hover, .btn-secondary:hover, 
+.btn-outline-warning:hover {
+    background-color: #9008ff !important; /* Darker orange on hover */
+    color: #fff !important;
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.btn-secondary:hover{
+    background-color: #19ca86 !important; /* Darker orange on hover */
+    color: #fff !important;
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+.btn-success:hover{
+    color: #fff !important;
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.btn-lg {
+    font-size: 1.2rem; /* Larger text for better visibility */
+}
+
+.hover-btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover .card-img-top {
+    transform: scale(1.1);
+}
+.card-hover .card-img-top {
+    transition: transform 0.3s ease;
+}
+.card-hover .card-body {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+.card-hover:hover .card-body {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ticket-card {
+    border: 1px solid #9008ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-card .btn-orange {
+    background-color: #9008ff;
+    color: white;
+    border: none;
+}
+
+.ticket-card .btn-orange:hover {
+    background-color: #5e08a5;
+}
+
+.event-banner {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-orange {
+    background-color: #9008ff;
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: #e65100;
+}
+
+
+.event-banner {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-orange {
+    background-color: #9008ff;
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: #6007a8;
+}
+
