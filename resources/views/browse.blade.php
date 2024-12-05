@@ -54,7 +54,7 @@
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                             </svg>
                         </a>
-                        <span class="text-lg font-bold text-gray-900 dark:text-white ml-4">{{$event->harga_tiket}}</span>
+                        <span class="text-lg font-bold text-gray-900 dark:text-white ml-4">${{$event->harga_tiket}}</span>
                     </div>
 
                 </div>

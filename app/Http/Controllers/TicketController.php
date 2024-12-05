@@ -28,6 +28,7 @@ class TicketController extends Controller
                 'tickets.ticket_code',
                 'tickets.status as status_tiket',
                 'bookings.status as status_booking',
+                'bookings.id',
                 DB::raw('COALESCE(events.gambar_acara, "https://via.placeholder.com/400x200") as gambar_acara')
             )
             ->get();

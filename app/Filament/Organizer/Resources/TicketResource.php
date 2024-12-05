@@ -40,17 +40,19 @@ class TicketResource extends Resource
                 Tables\Columns\TextColumn::make('event.nama_acara')
                     ->label('Event Name')
                     ->sortable(),
+                
                 Tables\Columns\TextColumn::make('ticket_code')
                     ->label('Ticket Code')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('status_tiket')
+                Tables\Columns\TextColumn::make('status')
                     ->label('Status')
                     ->searchable()
                     ->badge()
-                    ->color(function(string $state) : string{
-                        return match($state){
+                    ->color(function (string $state) : string {
+                        return match ($state) {
                             'active' => 'success',
                             'inactive' => 'danger',
+                            default => 'secondary', // untuk nilai selain active/inactive
                         };
                     }),
                 Tables\Columns\TextColumn::make('created_at')
@@ -63,7 +65,7 @@ class TicketResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                Tables\Filters\SelectFilter::make('status_tiket')
+                Tables\Filters\SelectFilter::make('status')
                     ->options([
                         'active' => 'Active',
                         'inactive' => 'Inactive',

@@ -138,7 +138,7 @@
                 <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Owner</h5>
             </div>
             <div class="flex flex-col items-center pb-10">
-                <img class="w-24 h-24 mb-3 rounded-full object-cover shadow-lg" src="{{asset('images/ekyy.jpg')}}" alt="Bonnie image"/>
+                <img class="w-24 h-24 mb-3 rounded-full object-cover shadow-lg" src="{{asset('images/image-default.jpg')}}" alt="Bonnie image"/>
                 <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{$events->user_name}}</h5>
                 <span class="text-sm text-gray-500 dark:text-gray-400">{{$events->user_email}}</span>
                 <div class="flex mt-4 md:mt-6">
